@@ -25,7 +25,7 @@ const Footer = () => {
   return (
     <footer className="relative bg-red-600 text-white mt-16 pt-20">
       {/* Overlay to reduce sharpness */}
-      <div className="absolute inset-0 bg-black/10"></div>
+      <div className="absolute inset-0 bg-black/25"></div> {/* Semi-transparent black overlay */}
 
       {/* Wavy Background with Gradient */}
       <div className="absolute top-0 left-0 w-full overflow-hidden" style={{ height: '100px' }}>
@@ -50,7 +50,7 @@ const Footer = () => {
 
       {/* Footer Content */}
       <div className="max-w-6xl mx-auto px-6 py-12 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-16"> {/* Increased gap to 16 */}
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-16">
           {/* Logo and Description */}
           <div className="mb-8 md:mb-0">
             <img
@@ -66,7 +66,7 @@ const Footer = () => {
           {/* Quick Links with Icons */}
           <div className="mb-8 md:mb-0">
             <h3 className="text-lg font-bold mb-6">Quick Links</h3>
-            <ul className="space-y-4"> {/* Increased spacing between links */}
+            <ul className="space-y-4">
               <li>
                 <a
                   href="/"
