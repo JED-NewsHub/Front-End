@@ -40,7 +40,7 @@ const Navbar = () => {
         </div>
         {/* Subscribe Button */}
         <button className="bg-white text-red-600 px-4 py-1 rounded font-bold hover:bg-gray-200 transition duration-300">
-          Subscribe
+        <Link to='/privacy'>Privacy Policy</Link>  
         </button>
       </div>
 

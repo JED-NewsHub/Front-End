@@ -10,6 +10,8 @@ import Login from './components/form/Login';
 import SignUp from './components/form/SignUp';
 import About from './components/pages/About';
 import Contact from './components/pages/Contact';
+import PrivacyPolicy from './components/pages/PrivacyPolicy';
+import NotFound from './components/pages/NotFound';
 
 function App() {
   const router = createBrowserRouter([
@@ -55,6 +57,16 @@ function App() {
     {
       path: "/contact",
       element:<Contact />
+    },
+
+    {
+      path: "/privacy",
+      element:<PrivacyPolicy />
+    },
+
+    {
+      path: "*",
+      element:<NotFound />
     },
   
   ]);
