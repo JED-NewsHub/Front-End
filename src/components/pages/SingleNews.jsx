@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 
 const SingleNews = () => {
   const { id } = useParams(); // Get the news ID from the URL
+  const navigate = useNavigate(); // Initialize navigate for navigation
   const [news, setNews] = useState(null);
 
   // Fetch news data based on ID (mock data for now)
   useEffect(() => {
-    // Replace this with an API call to your backend
     const mockNewsData = [
       {
         id: 1,
@@ -52,6 +52,23 @@ const SingleNews = () => {
   return (
     <div className="bg-gray-100 min-h-screen py-12">
       <div className="max-w-4xl mx-auto px-4">
+        {/* Back Arrow */}
+        <button 
+          onClick={() => navigate('/news')} 
+          className="text-blue-500 mb-4 flex items-center"
+        >
+          <svg 
+            xmlns="http://www.w3.org/2000/svg" 
+            className="h-6 w-6 mr-2" 
+            fill="none" 
+            viewBox="0 0 24 24" 
+            stroke="currentColor"
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+          </svg>
+          Back to News
+        </button>
+
         {/* News Title */}
         <h1 className="text-4xl font-bold mb-6">{news.title}</h1>
 

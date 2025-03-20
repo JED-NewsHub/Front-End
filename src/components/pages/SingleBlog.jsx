@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 
 const SingleBlog = () => {
   const { id } = useParams();
+  const navigate = useNavigate(); // Initialize navigate for navigation
   const [blog, setBlog] = useState(null);
   const [comments, setComments] = useState([]);
   const [newComment, setNewComment] = useState('');
@@ -53,6 +54,23 @@ const SingleBlog = () => {
   return (
     <div className="bg-gray-100 min-h-screen py-12">
       <div className="max-w-4xl mx-auto px-4">
+        {/* Back Arrow */}
+        <button 
+          onClick={() => navigate('/blog')} 
+          className="text-blue-500 mb-4 flex items-center"
+        >
+          <svg 
+            xmlns="http://www.w3.org/2000/svg" 
+            className="h-6 w-6 mr-2" 
+            fill="none" 
+            viewBox="0 0 24 24" 
+            stroke="currentColor"
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+          </svg>
+          Back to Blogs
+        </button>
+
         {/* Blog Content */}
         <h1 className="text-4xl font-bold mb-6">{blog.title}</h1>
         <p className="text-gray-700">{blog.content}</p>
