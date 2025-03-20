@@ -4,7 +4,7 @@ import { FaTwitter, FaFacebook, FaWhatsapp, FaTiktok } from 'react-icons/fa'; //
 
 const Footer = () => {
   return (
-    <footer className="relative bg-red-600 text-white mt-16 pt-20"> {/* Added pt-20 for top padding */}
+    <footer className="relative bg-red-400 text-white mt-16 pt-20"> {/* Added pt-20 for top padding */}
       {/* Wavy Background with Gradient */}
       <div className="absolute top-0 left-0 w-full overflow-hidden" style={{ height: '100px' }}>
         <svg
